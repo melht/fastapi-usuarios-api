@@ -6,6 +6,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 MONGO_URL = os.environ.get("MONGO_DB")
-client = AsyncIOMotorClient("MONGO_DB", tlsCAFile=certifi.where())
+client = AsyncIOMotorClient("MONGO_URL", tlsCAFile=certifi.where())
 database = client["anahuac2024"]
 collection = database["usuarios"]
